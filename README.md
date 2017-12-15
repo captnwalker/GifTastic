@@ -2,7 +2,7 @@
 
 ## Adult Cartoon Themed Search Page for Giphy
 
-Button press calls giphys based on button text. 
+Button press calls giphys based on button text.
 Option to create new buttons on any topic.
 
 ---
