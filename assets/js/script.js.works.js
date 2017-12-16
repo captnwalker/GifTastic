@@ -16,10 +16,20 @@
           var gifyDiv = $("<div class='gify'>");
           var rating = response.data.rating;
           var results = response.data; 
-          for (var i = 0; i < gifys.length; i++) {
-    //>>>>>>>>>>>>>>>>
+          for (var i = 0; i < results.length; i++) {
+    //>>>>>>>>>>>>>>>> changed giffys TO results in FOR above
+
+
+    if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+        // Creating a div with the class "item"
+        var gifDiv = $("<div class='item'>");
+
+        // Storing the result item's rating
+        var rating = results[i].rating;
+
+
           // Creating and storing a div tag
-          var gifyDiv = $("<div>");
+         // var gifyDiv = $("<div>");/////////////
           
           // Creating a paragraph tag with the result item's rating
           var p = $("<p>").text("Rating: " + results[i].rating);
@@ -37,7 +47,7 @@
           $("#gifs-appear-here").prepend(gifyDiv);
 
     //<<<<<<<<<<<<<
-          var pRate = $("<p>").text("Rating: " + rating);
+          //var pRate = $("<p>").text("Rating: " + rating);
 
           gifyDiv.append(pRate);
 
