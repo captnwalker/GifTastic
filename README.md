@@ -8,6 +8,7 @@ Option to create new buttons on any topic.
 ---
 
 ### Link to Live Site
+[GifTastic Live Site](https://captnwalker.github.io/GifTastic/ "GifTastic")
 
 ### Technologies Utilized
 
