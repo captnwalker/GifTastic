@@ -19,32 +19,35 @@ function displayGifInfo(gifName) {
     // var rating = response.data.rating;
     var results = response.data;
     for (var i = 0; i < gifys.length; i++) {
-
+      
       //Generating a div to hold the giphys
       var gifyDiv = $("<div>");
 
       //Storing rating response
       var rating = response.data.rating;
 
-      // Retrieving the URL for the image
-      var imgURL = response.rating;
-
       //Generating <p> and rating rating
       var p = $("<p>").text("Rating: " + results[i].rating);
 
       //Generating image tag
       var gify = $("<img>");
-
+      
       //Defining src attribute of the images pulled
       gify.attr("src", results[i].images.fixed_height.url);
-
-      gifyDiv.append(p);
 
       // Appending the paragraph and image tag to the <div>
       gifyDiv.append(gify);
 
       // Prependng to the "#gifs-appear-here" div
       $("#gifs-appear-here").prepend(gifyDiv);
+
+      //<<<<<<<<<<<<<
+      var pRate = $("<p>").text("Rating: " + rating);
+
+      gifyDiv.append(pRate);
+
+      // Retrieving the URL for the image
+      var imgURL = response.rating;
 
       // Creating an element to hold the image
       var image = $("<img>").attr("src", imgURL);
