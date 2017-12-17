@@ -20,6 +20,7 @@ button, div, form, input {
     left: 0px;
     top: 0px;
 }
+
 .snowflake {
     padding-left: 15px;
     font-family: Cambria, Georgia, serif;
@@ -30,6 +31,7 @@ button, div, form, input {
     user-select: none;
     z-index: 1000;
 }
+
 .snowflake:hover {
     cursor: default;
 }

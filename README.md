@@ -1,6 +1,6 @@
 # GifTastic
 
-## Cartoon Themed Search Page Powered by Giphy API & Ajax
+## An Engaging, Cartoon-Themed Search Page Powered by Giphy API & Ajax
 
 * Button press calls 10 Giphys based on button text.
 

@@ -1,4 +1,5 @@
-// Credit: https://www.kirupa.com/html5/the_falling_snow_effect.htm
+// This snow.js was NOT created by Steve Walker
+//Credit: https://www.kirupa.com/html5/the_falling_snow_effect.htm
 
 var requestAnimationFrame = window.requestAnimationFrame || 
 window.mozRequestAnimationFrame || 
