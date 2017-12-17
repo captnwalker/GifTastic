@@ -1,8 +1,8 @@
 //Setting Array
 var gifys = ["Rick and Morty", "Bo Jack Horseman", "South Park", "The Simpsons", "Futurama", "Robot Chicken", "Brickleberry", "Drawn Together", "Dr. Katz", "Beavis and Butt-Head"];
 
-
 function displayGifInfo(gifName) {
+
   //Removes previous giphys on.click
   //$("gifs").empty();  
   //Global vars
