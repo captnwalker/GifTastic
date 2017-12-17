@@ -1,10 +1,8 @@
-//Setting Array
-var gifys = ["Rick and Morty", "Bo Jack Horseman", "South Park", "The Simpsons", "Futurama", "Robot Chicken", "Brickleberry", "Drawn Together", "Dr. Katz", "Beavis and Butt-Head"];
+//Setting Initial Array Values
+var gifys = ["Rick and Morty", "Bo Jack Horseman", "South Park", "The Simpsons", "Futurama", "Robot Chicken", "Brickleberry", "Drawn Together", "Aeon Flux", "Ren and Stimpy"];
 
 function displayGifInfo(gifName) {
 
-  //Removes previous giphys on.click
-  //$("gifs").empty();  
   //Global vars
   var gify = $(this).attr("data-name");
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gify + "&api_key=ED5M7CisPjLAtbyt9UiIJpQdgioBnDSz&limit=10";
@@ -14,14 +12,20 @@ function displayGifInfo(gifName) {
     url: queryURL,
     method: "GET"
   }).done(function (response) {
+
+    //console logs
     console.log(queryURL);
     console.log(response);
+
+    //var assignments
     var gifyDiv = $("<div class='gify'>");
-    // var rating = response.data.rating;
     var results = response.data;
+
+    //Clears out previous giphy set before adding a new set
+    $("#gify-view").empty();
     for (var i = 0; i < gifys.length; i++) {
 
-      //Filtering foor an appropriate rating (PG-13 and under)
+      //Filtering for an appropriate rating (PG-13 and under)
       if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
         // Generating div with class "item"
@@ -81,15 +85,18 @@ function renderButtons() {
     a.text(gifys[i]);
     //Appending the button to HTML
     $("#buttons-view").append(a);
-  }
-}
+  };
+};
 
-//On.click function
+//On.click function; prevents duplicatation of initial buttons
 $("#add-gify").on("click", function (event) {
   event.preventDefault();
 
   //Stores user input from the textbox
   var gify = $("#gify-input").val().trim();
+
+  //Removes previous giphys on.click
+  $("gif").empty();
 
   //Adds Users input from the textbox to array
   gifys.push(gify);

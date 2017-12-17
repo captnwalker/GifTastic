@@ -8,9 +8,9 @@
 
 * Sampled lower portion of background image and set a background color of #4dc7a2 to allow for a seamless scroll as page length expands.
 
-* Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
+* Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionable material.)
 
-* Snow effect by: https://www.kirupa.com/html5/the_falling_snow_effect.htm
+* Snow :snowflake: effect courtesy of: https://www.kirupa.com/html5/the_falling_snow_effect.htm
 
 ---
 
