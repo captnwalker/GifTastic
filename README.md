@@ -2,13 +2,13 @@
 
 ## Cartoon Themed Search Page Powered by Giphy API & Ajax
 
-*Button press calls 10 Giphys based on button text.
+* Button press calls 10 Giphys based on button text.
 
-*Option to create new buttons on any topic.
+* Option to create new buttons on any topic.
 
-*Sampled lower portion of background image and set a background color of #4dc7a2 to allow for a seamless scroll as page length expands.
+* Sampled lower portion of background image and set a background color of #4dc7a2 to allow for a seamless scroll as page length expands.
 
-*Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
+* Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### Screenshot of this Project
 
-![GifTastic](https://raw,github.com/captnwalker/GifTastic/assets/img/GifTastic.png "Engaging, Cartoon-themed Giphy API Search Page")
+![GifTastic](https://raw.github.com/captnwalker/GifTastic/assets/img/GifTastic-sm.png "Engaging, Cartoon-themed Giphy API Search Page")
 
 ### Technologies Utilized
 
