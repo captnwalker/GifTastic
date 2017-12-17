@@ -17,7 +17,7 @@
 
 ### Screenshot of this Project
 
-![GifTastic](https://raw.github.com/captnwalker/GifTastic/assets/img/GifTastic-sm.png "Engaging, Cartoon-themed Giphy API Search Page")
+![GifTastic](https://raw.github.com/captnwalker/GifTastic/master/screenshot/GifTastic-sm.png "Engaging, Cartoon-themed Giphy API Search Page")
 
 ### Technologies Utilized
 
