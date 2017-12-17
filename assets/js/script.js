@@ -3,7 +3,8 @@ var gifys = ["Rick and Morty", "Bo Jack Horseman", "South Park", "The Simpsons",
 
 
 function displayGifInfo(gifName) {
-
+  //Removes previous giphys on.click
+  //$("gifs").empty();  
   //Global vars
   var gify = $(this).attr("data-name");
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gify + "&api_key=ED5M7CisPjLAtbyt9UiIJpQdgioBnDSz&limit=10";
@@ -20,83 +21,85 @@ function displayGifInfo(gifName) {
     var results = response.data;
     for (var i = 0; i < gifys.length; i++) {
 
-      //Generating a div to hold the giphys
-      var gifyDiv = $("<div>");
+      //Filtering foor an appropriate rating (PG-13 and under)
+      if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
-      //Storing rating response
-      var rating = response.data.rating;
+        // Generating div with class "item"
+        var gifyDiv = $("<div class='item'>");
 
-      // Retrieving the URL for the image
-      var imgURL = response.rating;
+        //Generating a div to hold the giphys
+        var gifyDiv = $("<div>");
 
-      //Generating <p> and rating rating
-      var p = $("<p>").text("Rating: " + results[i].rating);
+        //Storing rating response
+        var rating = response.data.rating;
 
-      //Generating image tag
-      var gify = $("<img>");
+        //Fetching URL for image
+        var imgURL = response.rating;
 
-      //Defining src attribute of the images pulled
-      gify.attr("src", results[i].images.fixed_height.url);
+        //Generating <p> and rating
+        var p = $("<p>").text("Rating: " + results[i].rating);
 
-      gifyDiv.append(p);
+        //Generating image tag
+        var gify = $("<img>");
 
-      // Appending the paragraph and image tag to the <div>
-      gifyDiv.append(gify);
+        //Defining src attribute of the images pulled
+        gify.attr("src", results[i].images.fixed_height.url);
 
-      // Prependng to the "#gifs-appear-here" div
-      $("#gifs-appear-here").prepend(gifyDiv);
+        //Appending rating to giphy
+        gifyDiv.append(p);
+        gifyDiv.append(gify);
 
-      // Creating an element to hold the image
-      var image = $("<img>").attr("src", imgURL);
+        //Setting src and URL attributes to giphy
+        var image = $("<img>").attr("src", imgURL);
 
-      // Appending the image
-      gifyDiv.append(image);
+        //Appending the giphy
+        gifyDiv.append(image);
 
-      // Putting the entire movie above the previous movies
-      $("#gify-view").prepend(gifyDiv);
-    }
+        //Prepending new giphys above previosly called giphys
+        $("#gify-view").prepend(gifyDiv);
+      };
+    };
   });
 };
 
-// Function for displaying movie data
+//Calling renderButtons function
 function renderButtons() {
 
-  // Deleting the movies prior to adding new movies
-  // (this is necessary otherwise you will have repeat buttons)
+  //Prevents repeated buttons -- Do not remove.
   $("#buttons-view").empty();
 
-  // Looping through the array of movies
+  //For Loop
   for (var i = 0; i < gifys.length; i++) {
 
-    // Then dynamicaly generating buttons for each movie in the array
-    // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+    //Generating buttons
     var a = $("<button>");
-    // Adding a class of movie to our button
+    //Adding class of gify
     a.addClass("gify");
-    // Adding a data-attribute
+    //Adding data-attribute
     a.attr("data-name", gifys[i]);
-    // Providing the initial button text
+    //Adding button text
     a.text(gifys[i]);
-    // Adding the button to the buttons-view div
+    //Appending the button to HTML
     $("#buttons-view").append(a);
   }
 }
 
-// This function handles events where a movie button is clicked
+//On.click function
 $("#add-gify").on("click", function (event) {
   event.preventDefault();
-  // This line grabs the input from the textbox
+
+  //Stores user input from the textbox
   var gify = $("#gify-input").val().trim();
 
-  // Adding movie from the textbox to our array
+  //Adds Users input from the textbox to array
   gifys.push(gify);
 
-  // Calling renderButtons which handles the processing of our movie array
+  //Calls renderButtons function for User input buttons
   renderButtons();
 });
 
-// Adding a click event listener to all elements with a class of "movie"
+//Adds a click event listener to elements with a class of "gify"
 $(document).on("click", ".gify", displayGifInfo);
 
-// Calling the renderButtons function to display the intial buttons
+//Calls the renderButtons function for the intial buttons as defined in the array
 renderButtons();

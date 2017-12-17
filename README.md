@@ -2,8 +2,9 @@
 
 ## Cartoon Themed Search Page for Giphy
 
-Button press calls Giphys based on button text.
+Button press calls 10 Giphys based on button text.
 Option to create new buttons on any topic.
+Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
 
 ---
 
