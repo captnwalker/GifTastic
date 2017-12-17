@@ -1,23 +1,15 @@
 body, small {
-    font-family: 'Gloria Hallelujah', cursive;
-    /* text-align: center; */
+    font-family: 'Gloria Hallelujah', cursive;   
     background: url(../img/RnM1440.png);
     background-color:#4dc7a2;   
     color: #f55003;
     background-repeat: no-repeat;
-    padding-left: 20px;
-    
+    padding-left: 20px;    
 }
 
-    form {
+form {
   font-size:1.5em;
 }
-
-    /* colors for rick-morty bg-#4dc7a2, text #f55003 */
-    /* font-family: 'Pangolin', cursive;  #2-bolder
-font-family: 'Indie Flower', cursive;       X
-font-family: 'Shadows Into Light', cursive; X
-font-family: 'Gloria Hallelujah', cursive;  #1 */
 
 button, div, form, input {
     margin:10px;

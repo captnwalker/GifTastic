@@ -1,10 +1,11 @@
 # GifTastic
 
-## Cartoon Themed Search Page for Giphy
+## Cartoon Themed Search Page Powered by Giphy API & Ajax
 
-Button press calls 10 Giphys based on button text.
-Option to create new buttons on any topic.
-Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
+*Button press calls 10 Giphys based on button text.
+*Option to create new buttons on any topic.
+*Sampled lower portion of background image and set a background color of #4dc7a2 to allow for a seamless scroll as page length expands.
+*Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionalbe material.)
 
 ---
 
