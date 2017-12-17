@@ -10,7 +10,7 @@
 
 * Results filtered to PG-13 and under. (Note: Giphy ratings can be unreliable. You may/will encounter potentially objectionable material.)
 
-* :fa-snowflake-o: Snow effect courtesy of: https://www.kirupa.com/html5/the_falling_snow_effect.htm
+* Snow effect courtesy of: https://www.kirupa.com/html5/the_falling_snow_effect.htm
 
 ---
 
