@@ -2,10 +2,10 @@
       var gifys = ["Rick and Morty", "Bo Jack Horseman", "South Park", "The Simpsons"];
 
       
-      function displayGifinfo(gifName) {
+      function displayGifInfo(gifName) {
 
         var gify = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifys + "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gify + "&api_key=ED5M7CisPjLAtbyt9UiIJpQdgioBnDSz&limit=10";
 
         $.ajax({
           url: queryURL,
@@ -94,7 +94,7 @@
       });
 
       // Adding a click event listener to all elements with a class of "movie"
-     $(document).on("click", ".gify", displayGifinfo);
+     $(document).on("click", ".gify", displayGifInfo);
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();

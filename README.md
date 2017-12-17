@@ -1,6 +1,6 @@
 # GifTastic
 
-## Adult Cartoon Themed Search Page for Giphy
+## Cartoon Themed Search Page for Giphy
 
 Button press calls Giphys based on button text.
 Option to create new buttons on any topic.
